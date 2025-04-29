@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-export default function FullScreenCalendlyModal() {
+export default function FullScreenCalendlyModal({ buttonText = "Agendar Consulta", className = "" }) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -53,12 +53,12 @@ export default function FullScreenCalendlyModal() {
         background: none !important;
       }
       
-      /* Botón de cierre personalizado SIN fondo gris */
+      /* Botón de cierre personalizado */
       .custom-calendly-close {
         position: fixed !important;
         top: 30px !important;
         right: 30px !important;
-        background: #4F46E5 !important;
+        background: #8A4F7D !important; /* violeta suave */
         color: white !important;
         width: 50px !important;
         height: 50px !important;
@@ -76,7 +76,7 @@ export default function FullScreenCalendlyModal() {
       }
       
       .custom-calendly-close:hover {
-        background: #4338CA !important;
+        background: #5E4A7D !important; /* violeta más oscuro */
         transform: scale(1.1) !important;
       }
       
@@ -149,7 +149,7 @@ export default function FullScreenCalendlyModal() {
         parentElement: document.body,
         branding: false,
         text: 'Agendar Consulta',
-        color: '#4F46E5',
+        color: '#8A4F7D', // violeta suave
         textColor: '#ffffff',
         language: 'es'
       });
@@ -159,9 +159,9 @@ export default function FullScreenCalendlyModal() {
   return (
     <button
       onClick={openCalendly}
-      className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+      className={`bg-[#DCD0FF] hover:bg-[#C9B8FF] text-[#5E4A7D] font-bold py-4 px-8 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#DCD0FF] focus:ring-offset-2 ${className}`}
     >
-      Agendar Consulta
+      {buttonText}
     </button>
   );
 }

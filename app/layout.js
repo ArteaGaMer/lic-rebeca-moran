@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import './globals.css';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import FloatingInstagram from '@/components/FloatingInstagram'; // Nueva importación
 
 export const metadata = {
   title: 'Lic. Rebeca Moran - Psicóloga Clínica',
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
         <footer className="text-indigo-900 py-6 text-center">
           © {new Date().getFullYear()} Lic. Rebeca Moran - Todos los derechos reservados
         </footer>
+        {/* Botones flotantes */}
         <FloatingWhatsApp />
+        <FloatingInstagram />
       </body>
     </html>
   );
