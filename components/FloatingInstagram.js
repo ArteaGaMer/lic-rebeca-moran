@@ -5,7 +5,7 @@ export default function FloatingInstagram() {
     <Link 
       href="https://www.instagram.com/rebecamoran.psic" 
       target="_blank"
-      className="fixed bottom-24 right-6 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+      className="fixed bottom-6 right-6 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
       aria-label="Instagram de Rebeca Moran Psicología"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
